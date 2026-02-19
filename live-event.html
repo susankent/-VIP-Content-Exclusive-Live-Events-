@@ -1,125 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VIP Live Event</title>
-
+    <title>VIP Live Event — ChySussy Ft TiffanyLanette & Squirt Goddess</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body{
-            background:black;
-            color:white;
-            font-family:Arial, Helvetica, sans-serif;
-            text-align:center;
-            margin:0;
-        }
-
-        .header{
-            background:linear-gradient(black,#111);
-            padding:40px 20px;
-            border-bottom:2px solid gold;
-        }
-
-        h1{
-            color:gold;
-            font-size:38px;
-        }
-
-        .container{
-            padding:30px;
-            max-width:700px;
-            margin:auto;
-        }
-
-        .card{
-            background:#111;
-            padding:25px;
-            border-radius:10px;
-            box-shadow:0 0 15px rgba(255,215,0,0.3);
-            margin-top:20px;
-        }
-
-        h2{
-            color:gold;
-        }
-
-        .line{
-            border-top:1px solid gold;
-            margin:25px 0;
-        }
-
-        .button{
-            display:inline-block;
-            margin-top:20px;
-            padding:15px 30px;
-            background:gold;
-            color:black;
-            font-weight:bold;
-            text-decoration:none;
-            border-radius:8px;
-            font-size:18px;
-        }
-
-        .bitcoin{
-            color:gold;
-            font-weight:bold;
-            word-wrap:break-word;
-        }
-
-        .footer{
-            margin-top:40px;
-            color:gray;
-        }
+        body { background:black; color:white; text-align:center; font-family:Arial, sans-serif; }
+        .button { padding:15px 30px; font-size:18px; border-radius:10px; background:red; color:white; text-decoration:none; display:inline-block; margin:10px 0; }
+        .countdown { font-size:24px; color:gold; margin:20px 0; }
+        ul { list-style:none; padding:0; }
+        ul li { margin:5px 0; }
+        .perks { color:lightgreen; font-weight:bold; }
+        .note { color:lightblue; font-size:14px; margin-top:5px; }
     </style>
 </head>
-
 <body>
 
-<div class="header">
-    <h1>🔥 VIP LIVE EVENT 🔥</h1>
-</div>
+<h1>🔥 VIP LIVE EVENT 🔥</h1>
 
-<div class="container">
+<!-- Event Banner / Flyer -->
+<img src="https://via.placeholder.com/600x300.png?text=VIP+LIVE+EVENT+BANNER" alt="VIP Live Event Banner">
 
-<div class="card">
+<!-- Countdown Timer -->
+<div class="countdown" id="countdown"></div>
 
+<!-- Event Details -->
 <h2>ChySussy Ft TiffanyLanette & Squirt Goddess</h2>
+<p>📅 Dates & Times:</p>
+<ul>
+  <li>March 8, 2026 — 7:00 PM EST</li>
+  <li>March 9, 2026 — 1:00 PM EST</li>
+</ul>
+<p>🎟️ Tickets: 20 total, 8 remaining</p>
 
-<p>📅 March 8, 2026 — 7:00 PM EST</p>
-<p>📅 March 9, 2026 — 1:00 PM EST</p>
+<h3>📍 Location (In-Person):</h3>
+<p style="color:white;font-weight:bold;">Wayside Ave, Hagerstown, MD</p>
 
-<p>🎟️ Tickets: 20 total — 8 remaining</p>
+<hr style="border:1px solid red; width:80%; margin:20px auto;">
 
-<div class="line"></div>
+<!-- In-Person Perks -->
+<h2>🏠 In-Person Ticket Perks</h2>
+<ul class="perks">
+  <li>🎉 Free drink included 🍹</li>
+  <li>🛏️ Free room for members traveling from far away</li>
+</ul>
 
-<h2>📍 Location (In-Person)</h2>
-<p>Wayside Ave, Hagerstown, MD</p>
+<hr style="border:1px solid red; width:80%; margin:20px auto;">
 
-<div class="line"></div>
-
+<!-- Suggested Prices & Payment -->
 <h2>🎟️ VIP Ticket Booking</h2>
 
-<p>💻 Online Access — Suggested: $600</p>
-<p>🏠 In-Person Access — Suggested: $700</p>
+<p>💻 Online Access — $600</p>
+<p>🏠 In-Person — $700</p>
 
+<!-- Updated Payment Button -->
 <a href="https://flutterwave.com/pay/mlukvmjun2uo" class="button" target="_blank">
-💳 Enter Amount & Pay
+💳 Pay with Card / Flutterwave
 </a>
 
-<div class="line"></div>
+<p class="note">
+You can pay with any card — Visa, Mastercard, debit, or credit — by clicking the button above.
+</p>
 
-<h2>🪙 Bitcoin Payment</h2>
+<br>
 
-<p>Send exact ticket amount to:</p>
-<p class="bitcoin">1H8iWaG37xBaeAi1BpPFrpuVmXkKGrABpY</p>
+<h2 style="color:gold;">🪙 Bitcoin Payment</h2>
+<p>Send the exact ticket amount to this address:</p>
+<p style="color:gold;font-size:18px;font-weight:bold;">1H8iWaG37xBaeAi1BpPFrpuVmXkKGrABpY</p>
+<p>After payment, send proof to email or WhatsApp for confirmation.</p>
 
-<p>After payment, send proof for confirmation.</p>
+<hr style="border:1px solid red; width:80%; margin:20px auto;">
 
-</div>
+<!-- Optional Notes -->
+<p>🔥 Don’t miss this exclusive VIP event with top creators!</p>
+<p>🎫 Tickets are limited — get yours now!</p>
 
-<div class="footer">
-🔥 Limited VIP Access — Don’t Miss Out 🔥
-</div>
+<!-- Back to Home -->
+<a href="index.html" class="button">⬅ Back to Home</a>
 
-</div>
+<script>
+  // Countdown Timer
+  const countdownDate = new Date("March 8, 2026 19:00:00").getTime();
+  const countdown = document.getElementById("countdown");
+
+  function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      if (distance < 0) {
+          countdown.innerHTML = "🎉 Event Started!";
+          return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `⏳ Starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
